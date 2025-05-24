@@ -1,2 +1,3 @@
-# blog.oinam.com
-Oinam Blog
+# Oinam Blog
+
+https://blog.oinam.com
