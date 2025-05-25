@@ -1,0 +1,50 @@
+title: Oinam Blog
+email: hi@oinam.com
+description: Taking care of kids and women. Save the planet, curb climate change. Progress exponentially.
+
+url: "https://blog.oinam.com"
+baseurl: ""
+
+user_x: oinam
+user_github:  oinam
+user_linkedin: oinam
+user_instagram: oinam
+
+# Build settings
+theme: minima
+
+markdown: kramdown
+highlighter: rouge
+
+permalink: pretty
+permalink: /:title/
+
+optional_front_matter:
+  remove_originals: true
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: true
+
+defaults:
+  - scope:
+      path: '_posts'
+      type: 'posts'
+    values:
+      layout: 'post'
+      permalink: '/:year/:slug'
+
+plugins:
+  - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+
+exclude:
+  - .jekyll-cache/
+  - .sass-cache/
+  - Gemfile
+  - Gemfile.lock
+  - gemfiles/
+  - README.md
