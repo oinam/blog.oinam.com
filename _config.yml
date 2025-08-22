@@ -5,19 +5,42 @@ description: Taking care of kids and women. Save the planet, curb climate change
 url: "https://blog.oinam.com"
 baseurl: ""
 
-user_x: oinam
+user_twitter: oinam
 user_github:  oinam
 user_linkedin: oinam
 user_instagram: oinam
 
 # Build settings
-theme: minima
+remote_theme: oinam/oinam-jekyll
+
+# Oinam Jekyll Theme Config
+
+# footer
+footer:
+  credit: true
+  custom: false
+
+# if above footer:custom is 'true', then this will be printed instead
+footer_custom: 'An ever Work-in-Progress effort by <a href="https://oinam.com">Oinam</a>.'
+
+layout:
+  home_posts_no: 9
+  posts_home: /
+  link_new_tab: false # should external links open in a new tab (true) or in the current tab (false)
+  header_desc: false # set to false to disable description in the Header.
+
+
+# --------------------------------------
 
 markdown: kramdown
 highlighter: rouge
 
 permalink: pretty
 permalink: /:title/
+
+sass:
+  style: compressed # nested, compact, expanded or compressed
+  sourcemap: never
 
 optional_front_matter:
   remove_originals: true
@@ -36,9 +59,11 @@ defaults:
       permalink: '/:year/:slug'
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
-  - jekyll-optional-front-matter
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-optional-front-matter
   - jekyll-titles-from-headings
 
 exclude:
