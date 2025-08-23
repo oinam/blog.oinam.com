@@ -1,46 +1,33 @@
-title: Oinam Blog
-email: hi@oinam.com
-description: Taking care of kids and women. Save the planet, curb climate change. Progress exponentially.
+title: Oinam’s Blog
+description: >- # this means to ignore newlines until "baseurl:"
+  Taking care of kids and women. Save the planet, curb climate change. Progress exponentially.
 
-url: "https://blog.oinam.com"
 baseurl: ""
-
-user_twitter: oinam
-user_github:  oinam
-user_linkedin: oinam
-user_instagram: oinam
-
-# Build settings
-remote_theme: oinam/oinam-jekyll
-
-# Oinam Jekyll Theme Config
-
-# footer
-footer:
-  credit: true
-  custom: false
-
-# if above footer:custom is 'true', then this will be printed instead
-footer_custom: 'An ever Work-in-Progress effort by <a href="https://oinam.com">Oinam</a>.'
-
-layout:
-  home_posts_no: 9
-  posts_home: /
-  link_new_tab: false # should external links open in a new tab (true) or in the current tab (false)
-  header_desc: false # set to false to disable description in the Header.
-
-
-# --------------------------------------
-
-markdown: kramdown
-highlighter: rouge
+url: "https://blog.oinam.com"
 
 permalink: pretty
 permalink: /:title/
 
+markdown: kramdown
+highlighter: rouge
+
+username:
+  twitter:  oinam
+  github:   oinam
+
+feed:
+  posts_limit: 9
+  author: Oinam
+
 sass:
-  style: compressed # nested, compact, expanded or compressed
+  style: compressed
   sourcemap: never
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
 
 optional_front_matter:
   remove_originals: true
@@ -56,20 +43,10 @@ defaults:
       type: 'posts'
     values:
       layout: 'post'
-      permalink: '/:year/:slug'
-
-plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-optional-front-matter
-  - jekyll-titles-from-headings
+      permalink: '/:year/:title/'
 
 exclude:
-  - .jekyll-cache/
-  - .sass-cache/
+  - .obsidian
   - Gemfile
   - Gemfile.lock
-  - gemfiles/
-  - README.md
+  - README.*

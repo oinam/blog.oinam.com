@@ -5,6 +5,7 @@
 _site
 vendor
 
+
 # Ignore OS generated files #
 .DS_Store*
 ehthumbs.db

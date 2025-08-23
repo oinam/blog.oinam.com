@@ -1,0 +1,6 @@
+{% capture include_to_scssify %}
+
+{% include styles.css %}
+
+{% endcapture %}
+{{- include_to_scssify | scssify | strip_newlines -}}

@@ -1,0 +1,44 @@
+:root {
+  --width-max: 42rem;
+  --width-ideal: 96%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 1rem auto;
+  width: var(--width-ideal);
+  max-width: var(--width-max);
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  
+  line-height: 1.618034;
+  
+  color: #171717;
+  background-color: #f0f0f0;
+}
+
+footer {
+  padding: 0.5rem 0;
+}
+
+hr {
+  border: 0 none;
+  background: none;
+  height: 0;
+  border-bottom: 1px solid #aaa;
+  margin: 0.5rem 0;
+}
